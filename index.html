@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge - Find Local Skilled Workers & Artisans</title>
+    <meta name="description" content="SkillBridge connects you with trusted local skilled workers including electricians, plumbers, carpenters, barbers, and more. Find vetted professionals in your area.">
+    <meta name="keywords" content="skilled workers, artisans, local services, electrician, plumber, carpenter, barber">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ8g35pE8wW73T9f2E4J5vJ+j4H0LzE5hT5wH5z5z5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Skip to Main Content Link (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Main navigation">
+        <div class="container-lg">
+            <a class="navbar-brand" href="index.html" title="SkillBridge Home">
+                <i class="fas fa-hammer-wrench me-2"></i>
+                <strong>SkillBridge</strong>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#find-pro" onclick="navigateToPage('find-pro'); return false;">Find a Pro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#join" onclick="navigateToPage('join'); return false;">Join as Pro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- ========== HOME PAGE ========== -->
+        <div id="home-page" class="page-content active">
+            
+            <!-- Hero Section -->
+            <section class="hero-section" aria-label="Welcome section">
+                <div class="container-lg">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h1 class="hero-title">Find Trusted Skilled Workers Near You</h1>
+                            <p class="hero-subtitle">Connect with vetted electricians, plumbers, carpenters, barbers, and more. Get reliable service, fair pricing, and peace of mind.</p>
+                            <div class="hero-cta">
+                                <button class="btn btn-primary btn-lg" onclick="navigateToPage('find-pro');">
+                                    <i class="fas fa-search me-2"></i>Find a Professional
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hero-image-container">
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop" alt="Team of skilled workers" class="hero-image" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section class="how-it-works py-5" aria-label="How SkillBridge works">
+                <div class="container-lg">
+                    <h2 class="section-title text-center mb-5">How It Works</h2>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-4">
+                            <div class="step-card">
+                                <div class="step-number">1</div>
+                                <h3 class="step-title">Describe Your Need</h3>
+                                <p class="step-description">Tell us what service you need and your location. Our platform helps you find the right professional.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="step-card">
+                                <div class="step-number">2</div>
+                                <h3 class="step-title">Browse & Compare</h3>
+                                <p class="step-description">View profiles, ratings, experience, and pricing from vetted professionals in your area.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="step-card">
+                                <div class="step-number">3</div>
+                                <h3 class="step-title">Book & Get Work Done</h3>
+                                <p class="step-description">Connect directly with your chosen professional and schedule your service with confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular Trades/Categories Section -->
+            <section class="popular-trades py-5" aria-label="Popular service categories">
+                <div class="container-lg">
+                    <h2 class="section-title text-center mb-5">Popular Services</h2>
+                    
+                    <div class="row g-3">
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <a href="#find-pro" class="trade-card" onclick="navigateToPage('find-pro'); return false;">
+                                <div class="trade-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h3 class="trade-name">Electrician</h3>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <a href="#find-pro" class="trade-card" onclick="navigateToPage('find-pro'); return false;">
+                                <div class="trade-icon">
+                                    <i class="fas fa-pipe"></i>
+                                </div>
+                                <h3 class="trade-name">Plumber</h3>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <a href="#find-pro" class="trade-card" onclick="navigateToPage('find-pro'); return false;">
+                                <div class="trade-icon">
+                                    <i class="fas fa-hammer"></i>
+                                </div>
+                                <h3 class="trade-name">Carpenter</h3>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <a href="#find-pro" class="trade-card" onclick="navigateToPage('find-pro'); return false;">
+                                <div class="trade-icon">
+                                    <i class="fas fa-scissors"></i>
+                                </div>
+                                <h3 class="trade-name">Barber</h3>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <a href="#find-pro" class="trade-card" onclick="navigateToPage('find-pro'); return false;">
+                                <div class="trade-icon">
+                                    <i class="fas fa-paint-roller"></i>
+                                </div>
+                                <h3 class="trade-name">Painter</h3>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-2">
+                            <a href="#find-pro" class="trade-card" onclick="navigateToPage('find-pro'); return false;">
+                                <div class="trade-icon">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                                <h3 class="trade-name">Handyman</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials py-5 bg-light" aria-label="Customer testimonials">
+                <div class="container-lg">
+                    <h2 class="section-title text-center mb-5">What Customers Say</h2>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <div class="stars mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"Found the perfect electrician in just 2 hours. Professional, punctual, and affordable. Highly recommend!"</p>
+                                <p class="testimonial-author">— <strong>Sarah M.</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <div class="stars mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"As a skilled worker, SkillBridge has been a game-changer for my business. Quality leads and direct client connections!"</p>
+                                <p class="testimonial-author">— <strong>Mike T.</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <div class="stars mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"Transparent pricing, verified reviews, and excellent customer support. This is the future of finding services!"</p>
+                                <p class="testimonial-author">— <strong>Jessica L.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section py-5" aria-label="Call to action">
+                <div class="container-lg">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h2>Ready to Get Your Project Done?</h2>
+                            <p class="lead">Join thousands of satisfied customers who found the perfect professional on SkillBridge.</p>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <button class="btn btn-primary btn-lg me-3 mb-2" onclick="navigateToPage('find-pro');">Find a Pro</button>
+                            <button class="btn btn-outline-primary btn-lg mb-2" onclick="navigateToPage('join');">Join as Professional</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ========== FIND A PRO PAGE ========== -->
+        <div id="find-pro-page" class="page-content">
+            <div class="container-lg py-5">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h1 class="page-title">Find a Trusted Professional</h1>
+                        <p class="text-muted">Browse our vetted network of skilled workers in your area</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Filters Sidebar -->
+                    <div class="col-lg-3 mb-4">
+                        <div class="filter-section sticky-lg-top" style="top: 80px;">
+                            <h3 class="filter-title mb-4">Filters</h3>
+
+                            <!-- Trade Filter -->
+                            <div class="mb-4">
+                                <label for="trade-filter" class="form-label fw-bold">Service Type</label>
+                                <select class="form-select" id="trade-filter" aria-label="Filter by service type">
+                                    <option value="">All Services</option>
+                                    <option value="electrician">Electrician</option>
+                                    <option value="plumber">Plumber</option>
+                                    <option value="carpenter">Carpenter</option>
+                                    <option value="barber">Barber</option>
+                                    <option value="painter">Painter</option>
+                                    <option value="handyman">Handyman</option>
+                                </select>
+                            </div>
+
+                            <!-- Rating Filter -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Minimum Rating</label>
+                                <div class="rating-options">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating-all" value="" checked>
+                                        <label class="form-check-label" for="rating-all">
+                                            All Ratings
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating-4" value="4">
+                                        <label class="form-check-label" for="rating-4">
+                                            <i class="fas fa-star text-warning"></i> 4.0+
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating-45" value="4.5">
+                                        <label class="form-check-label" for="rating-45">
+                                            <i class="fas fa-star text-warning"></i> 4.5+
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating-5" value="5">
+                                        <label class="form-check-label" for="rating-5">
+                                            <i class="fas fa-star text-warning"></i> 5.0
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Price Range Filter -->
+                            <div class="mb-4">
+                                <label for="price-range" class="form-label fw-bold">Hourly Rate</label>
+                                <input type="range" class="form-range" id="price-range" min="10" max="150" value="150" aria-label="Filter by hourly rate">
+                                <small class="text-muted d-block mt-2">Up to $<span id="price-value">150</span>/hr</small>
+                            </div>
+
+                            <!-- Availability Filter -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Availability</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="availability-week" checked>
+                                    <label class="form-check-label" for="availability-week">
+                                        Available This Week
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="availability-urgent" checked>
+                                    <label class="form-check-label" for="availability-urgent">
+                                        Available Urgently
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary w-100" onclick="alert('This is a static prototype. Filters are visual only.');">Apply Filters</button>
+                        </div>
+                    </div>
+
+                    <!-- Professionals Grid -->
+                    <div class="col-lg-9">
+                        <div class="row g-4">
+                            <!-- Professional Card 1 -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="professional-card">
+                                    <div class="professional-image">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Photo of Mike Chen, electrician" loading="lazy" class="img-fluid">
+                                        <div class="badge badge-featured">
+                                            <i class="fas fa-check-circle"></i> Verified
+                                        </div>
+                                    </div>
+                                    <div class="professional-info">
+                                        <h3 class="professional-name">Mike Chen</h3>
+                                        <p class="professional-trade">Certified Electrician</p>
+                                        <div class="professional-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star-half-alt text-warning"></i>
+                                            </div>
+                                            <span class="rating-value">4.9 (128 reviews)</span>
+                                        </div>
+                                        <p class="professional-description">15+ years of experience in residential and commercial electrical work.</p>
+                                        <div class="professional-price">
+                                            <span class="price-label">From</span>
+                                            <span class="price-value">$65/hr</span>
+                                        </div>
+                                        <button class="btn btn-outline-primary w-100 mt-3">View Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Professional Card 2 -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="professional-card">
+                                    <div class="professional-image">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" alt="Photo of Sarah Rodriguez, plumber" loading="lazy" class="img-fluid">
+                                        <div class="badge badge-featured">
+                                            <i class="fas fa-check-circle"></i> Verified
+                                        </div>
+                                    </div>
+                                    <div class="professional-info">
+                                        <h3 class="professional-name">Sarah Rodriguez</h3>
+                                        <p class="professional-trade">Master Plumber</p>
+                                        <div class="professional-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                            </div>
+                                            <span class="rating-value">5.0 (89 reviews)</span>
+                                        </div>
+                                        <p class="professional-description">Specialist in plumbing repairs, installations, and emergency services.</p>
+                                        <div class="professional-price">
+                                            <span class="price-label">From</span>
+                                            <span class="price-value">$75/hr</span>
+                                        </div>
+                                        <button class="btn btn-outline-primary w-100 mt-3">View Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Professional Card 3 -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="professional-card">
+                                    <div class="professional-image">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Photo of David Johnson, carpenter" loading="lazy" class="img-fluid">
+                                        <div class="badge badge-featured">
+                                            <i class="fas fa-check-circle"></i> Verified
+                                        </div>
+                                    </div>
+                                    <div class="professional-info">
+                                        <h3 class="professional-name">David Johnson</h3>
+                                        <p class="professional-trade">Expert Carpenter</p>
+                                        <div class="professional-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star-half-alt text-warning"></i>
+                                            </div>
+                                            <span class="rating-value">4.8 (156 reviews)</span>
+                                        </div>
+                                        <p class="professional-description">Custom furniture, repairs, and renovation carpentry services.</p>
+                                        <div class="professional-price">
+                                            <span class="price-label">From</span>
+                                            <span class="price-value">$70/hr</span>
+                                        </div>
+                                        <button class="btn btn-outline-primary w-100 mt-3">View Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Professional Card 4 -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="professional-card">
+                                    <div class="professional-image">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" alt="Photo of Emily Brown, barber" loading="lazy" class="img-fluid">
+                                        <div class="badge badge-featured">
+                                            <i class="fas fa-check-circle"></i> Verified
+                                        </div>
+                                    </div>
+                                    <div class="professional-info">
+                                        <h3 class="professional-name">Emily Brown</h3>
+                                        <p class="professional-trade">Professional Barber</p>
+                                        <div class="professional-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                            </div>
+                                            <span class="rating-value">5.0 (203 reviews)</span>
+                                        </div>
+                                        <p class="professional-description">Specialty cuts, styling, and traditional barber services.</p>
+                                        <div class="professional-price">
+                                            <span class="price-label">From</span>
+                                            <span class="price-value">$30/hr</span>
+                                        </div>
+                                        <button class="btn btn-outline-primary w-100 mt-3">View Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Professional Card 5 -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="professional-card">
+                                    <div class="professional-image">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Photo of James Wilson, painter" loading="lazy" class="img-fluid">
+                                        <div class="badge badge-featured">
+                                            <i class="fas fa-check-circle"></i> Verified
+                                        </div>
+                                    </div>
+                                    <div class="professional-info">
+                                        <h3 class="professional-name">James Wilson</h3>
+                                        <p class="professional-trade">Interior & Exterior Painter</p>
+                                        <div class="professional-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star-half-alt text-warning"></i>
+                                            </div>
+                                            <span class="rating-value">4.7 (94 reviews)</span>
+                                        </div>
+                                        <p class="professional-description">High-quality painting with attention to detail and eco-friendly materials.</p>
+                                        <div class="professional-price">
+                                            <span class="price-label">From</span>
+                                            <span class="price-value">$50/hr</span>
+                                        </div>
+                                        <button class="btn btn-outline-primary w-100 mt-3">View Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Professional Card 6 -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="professional-card">
+                                    <div class="professional-image">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Photo of Thomas Lee, handyman" loading="lazy" class="img-fluid">
+                                        <div class="badge badge-featured">
+                                            <i class="fas fa-check-circle"></i> Verified
+                                        </div>
+                                    </div>
+                                    <div class="professional-info">
+                                        <h3 class="professional-name">Thomas Lee</h3>
+                                        <p class="professional-trade">Reliable Handyman</p>
+                                        <div class="professional-rating">
+                                            <div class="stars">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                            </div>
+                                            <span class="rating-value">4.9 (167 reviews)</span>
+                                        </div>
+                                        <p class="professional-description">General repairs, maintenance, and small construction projects.</p>
+                                        <div class="professional-price">
+                                            <span class="price-label">From</span>
+                                            <span class="price-value">$45/hr</span>
+                                        </div>
+                                        <button class="btn btn-outline-primary w-100 mt-3">View Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== JOIN AS PRO PAGE ========== -->
+        <div id="join-page" class="page-content">
+            <div class="container-lg py-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="page-title text-center mb-2">Join Our Network</h1>
+                        <p class="text-center text-muted mb-5">Grow your business and connect with customers actively seeking your services</p>
+
+                        <!-- Registration Form -->
+                        <div class="form-section">
+                            <h3 class="form-section-title mb-4">Professional Registration</h3>
+                            
+                            <form id="registration-form" onsubmit="handleFormSubmit(event);">
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" required aria-required="true">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" required aria-required="true">
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required aria-required="true">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="(555) 123-4567" required aria-required="true">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="trade" class="form-label">Primary Trade/Skill <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="trade" name="trade" required aria-required="true">
+                                        <option value="">Select your primary trade...</option>
+                                        <option value="electrician">Electrician</option>
+                                        <option value="plumber">Plumber</option>
+                                        <option value="carpenter">Carpenter</option>
+                                        <option value="barber">Barber</option>
+                                        <option value="painter">Painter</option>
+                                        <option value="handyman">Handyman</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="experience" class="form-label">Years of Experience <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="experience" name="experience" min="0" max="60" required aria-required="true">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="location" class="form-label">Service Area/City <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="location" name="location" placeholder="e.g., New York, NY" required aria-required="true">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="bio" class="form-label">Professional Bio <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="bio" name="bio" rows="4" placeholder="Tell customers about your experience, specialties, and why they should choose you..." required aria-required="true"></textarea>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="hourlyRate" class="form-label">Hourly Rate ($) <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="hourlyRate" name="hourlyRate" min="15" step="5" required aria-required="true">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold mb-3">Services Offered</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="service1" name="services" value="emergency">
+                                        <label class="form-check-label" for="service1">
+                                            Emergency/Urgent Services
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="service2" name="services" value="weekend">
+                                        <label class="form-check-label" for="service2">
+                                            Weekend Availability
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="service3" name="services" value="consultation">
+                                        <label class="form-check-label" for="service3">
+                                            Free Consultation
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4 form-check">
+                                    <input type="checkbox" class="form-check-input" id="terms" name="terms" required aria-required="true">
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the Terms of Service and Privacy Policy <span class="text-danger">*</span>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg w-100">Submit Application</button>
+                                <small class="d-block text-center text-muted mt-3">
+                                    <i class="fas fa-info-circle"></i> This is a static prototype. Applications are not actually stored.
+                                </small>
+                            </form>
+                        </div>
+
+                        <!-- Contact Section -->
+                        <div class="contact-section mt-5 pt-5 border-top">
+                            <h3 class="mb-4">Questions?</h3>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="contact-info">
+                                        <i class="fas fa-envelope text-primary mb-3"></i>
+                                        <h5>Email</h5>
+                                        <a href="mailto:professionals@skillbridge.com">professionals@skillbridge.com</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="contact-info">
+                                        <i class="fas fa-phone text-primary mb-3"></i>
+                                        <h5>Phone</h5>
+                                        <a href="tel:+15551234567">(555) 123-4567</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container-lg">
+            <div class="row g-4 mb-5">
+                <div class="col-md-3">
+                    <h5>SkillBridge</h5>
+                    <p class="text-muted small">Connecting customers with trusted skilled professionals.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">For Customers</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="#find-pro" onclick="navigateToPage('find-pro'); return false;" class="footer-link">Find a Pro</a></li>
+                        <li><a href="#" class="footer-link">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">For Professionals</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#join" onclick="navigateToPage('join'); return false;" class="footer-link">Join Our Network</a></li>
+                        <li><a href="#" class="footer-link">Pricing</a></li>
+                        <li><a href="#" class="footer-link">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center pt-4 border-top">
+                <p class="text-muted small">&copy; 2024 SkillBridge. All rights reserved. | Built with HTML5, CSS3, and Bootstrap</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white border-0">
+                    <h5 class="modal-title" id="successModalLabel">
+                        <i class="fas fa-check-circle me-2"></i>Application Submitted
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <p class="mb-2">Thank you for submitting your application!</p>
+                    <p class="text-muted small mb-3">We'll review your profile and get back to you within 24 hours.</p>
+                    <p class="text-muted small" style="font-size: 0.85rem;">
+                        <i class="fas fa-info-circle"></i> <strong>Note:</strong> This is a static prototype. Application data is not actually stored.
+                    </p>
+                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Page Navigation
+        function navigateToPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show selected page
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) {
+                targetPage.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Update price range display
+        document.getElementById('price-range')?.addEventListener('input', function() {
+            document.getElementById('price-value').textContent = this.value;
+        });
+
+        // Handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const modal = new bootstrap.Modal(document.getElementById('successModal'));
+            document.getElementById('registration-form').reset();
+            modal.show();
+        }
+
+        // Initialize page on load
+        document.addEventListener('DOMContentLoaded', function() {
+            navigateToPage('home');
+        });
+    </script>
+</body>
+</html>
